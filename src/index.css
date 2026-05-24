@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #f3f5ff, #eef2ff 45%, #f7f9fc 100%);
+  color: #1f2937;
+}
+
+:root {
+  --brand-grad: linear-gradient(120deg, #5b6cff, #7f4cff 55%, #b347ff);
+  --card-shadow: 0 14px 40px rgba(30, 41, 59, 0.12);
+}
+
+.app-navbar {
+  background: var(--brand-grad);
+  box-shadow: 0 8px 20px rgba(91, 108, 255, 0.25);
+}
+
+.brand-glow {
+  letter-spacing: 0.2px;
+}
+
+.hero {
+  background: var(--brand-grad);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  right: -120px;
+  top: -250px;
+}
+
+.section h2 {
+  color: #1e293b;
+}
+
+.blog-card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: #fff;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 46px rgba(30, 41, 59, 0.2);
+}
+
+.blog-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.user-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 140px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  z-index: 10;
+}
+
+.menu-item {
+  margin: 0;
+  width: 100%;
+  border: 0;
+  text-align: left;
+  background: transparent;
+  font-weight: 600;
+  color: #334155;
+}
+
+.menu-danger {
+  color: #dc2626;
+}
+
+.login-wrapper,
+.write-wrapper,
+.dashboard-section {
+  min-height: calc(100vh - 76px);
+}
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #5b6cff 0%, #8d49ff 100%);
+}
+
+.login-box,
+.write-card,
+.post-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.login-box {
+  padding: 2.25rem;
+}
+
+.login-subtext {
+  margin-top: 1rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.write-card {
+  padding: 2rem;
+}
+
+.post-card {
+  border-radius: 16px;
+}
+
+.form-control,
+.form-control:focus,
+.form-control-lg {
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .login-box,
+  .write-card {
+    padding: 1.4rem;
+  }
+}
